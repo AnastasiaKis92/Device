@@ -1,0 +1,302 @@
+html {
+  height: 100%;
+  font-size: 20px;
+}
+
+.body {
+  width: 1160px;
+  margin: 0 auto;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 0.9rem;
+  line-height: 30px;
+  color: #444444;
+  background-color: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  margin-top: 40px;
+  padding: 0 60px;
+  background-color: #FFE17F;
+}
+
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 44px;
+  padding-bottom: 30px;
+}
+
+.auth {
+  margin-right: auto;
+}
+
+.nav__logo {
+  position: absolute;
+  top: 0;
+  width: 145px;
+  height: 36px;
+  margin-top: 17px;
+  padding: 2px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 0.9rem;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form__field,
+.search-form__btn {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 0.8rem;
+  line-height: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  text-transform: none;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Форма поиска */
+.nav__search-form {
+  display: flex;
+  margin-right: 26px;
+}
+
+.search-form__field {
+  box-sizing: border-box;
+  width: 359px;
+  padding: 8px 48px;
+  background-color: transparent;
+  background: url("../images/header/search.svg") no-repeat left 16px center;
+  border-right-width: 0;
+}
+
+.search-form__btn {
+  width: 160px;
+  padding: 8px 56px;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Ссылки в меню пользователя */
+.nav__item {
+  position: relative;
+}
+
+.user__link {
+  display: block;
+  margin-right: 18px;
+  text-align: right;
+  color: #000000;
+  text-decoration: none;
+}
+
+.user__link--auth {
+  width: 79px;
+  background: url("../images/header/auth.svg") no-repeat left 2px center;
+}
+
+.user__link--compare {
+  width: 105px;
+  background: url("../images/header/compare.svg") no-repeat left 2px center;
+}
+
+.user__link--cart {
+  width: 117px;
+  margin-right: 0;
+  background: url("../images/header/cart.svg") no-repeat left 15px center;
+}
+
+.user__counter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  z-index: 1;
+}
+
+.user__counter::after {
+  position: absolute;
+  top: -2px;
+  left: -6px;
+  width: 21px;
+  height: 21px; 
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  content: "";
+  z-index: -1;
+}
+
+/* Каталог товаров */
+.nav-catalog,
+.nav-catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-catalog__btn {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.nav-catalog__list {
+  margin-left: auto;
+}
+
+.nav-catalog__circle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 7px;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.nav-catalog__circle::before,
+.nav-catalog__circle::after {
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #000000;
+  content: "";
+}
+
+.nav-catalog__circle::before {
+  width: 2px;
+  height: 16px;
+}
+.nav-catalog__circle::after {
+  width: 16px;
+  height: 2px;
+}
+
+.nav-catalog__link {
+  margin-left: 45px;
+}
+
+.nav-catalog__link--current::after,
+.nav-submenu__link--current::after {
+  display: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  background-color: #000000;
+  content: "";
+}
+
+/* Выпадающее меню */
+.nav-submenu {
+  display: none;
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: 55px;
+}
+
+.nav-submenu__list:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-submenu__link {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-catalog__circle:hover {
+  opacity: 1;
+}
+
+.nav-catalog__btn:active .nav-catalog__circle::before {
+  display: none;
+}
+
+
+
+
+
+
+.nav-submenu__link--current::after {
+  padding-bottom: 1px;
+}
+
+/* Интерактив в header */
+.nav__logo:hover,
+.user__link:hover,
+.nav__item--cart:hover,
+.nav-catalog__link:hover {
+  opacity: 0.6;
+}
+
+.nav__logo:active,
+.user__link:active,
+.nav__item--cart:active,
+.nav-catalog__link:active, 
+.search-form__field:disabled,
+.search-form__btn:disabled {
+  opacity: 0.3;
+}
+
+.search-form__btn:hover,
+.search-form__btn:active {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.search-form__btn:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+/* Не получается сделать фокус у поля "найти" на расстоянии 2px от input и от кнопки */
+.nav__logo:focus,
+.search-form__field:focus,
+.search-form__btn:focus,
+.user__link:focus,
+.nav-catalog__btn:focus,
+.nav-catalog__link:focus {
+  outline: 2px solid #AF4FFF;
+}
