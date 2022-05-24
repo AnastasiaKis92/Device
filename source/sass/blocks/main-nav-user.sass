@@ -1,0 +1,45 @@
+// Меню пользователя - "Найти, сравнить, корзина"
+.main-nav-user
+    position: relative
+    @include link
+
+    &--login
+        margin-right: auto
+
+.main-nav-user__link
+    display: block
+    margin-right: 18px
+    text-align: right
+    color: $black
+    @include focus
+
+    &--login 
+        width: 79px
+        background: url("../img/header/auth.svg") no-repeat left 2px center
+
+    &--compare 
+        width: 105px
+        background: url("../img/header/compare.svg") no-repeat left 2px center
+
+    &--cart 
+        width: 117px
+        margin-right: 0
+        background: url("../img/header/cart.svg") no-repeat left 15px center
+
+
+.main-nav-user__counter
+    @include align-top
+    left: 5px
+    @include font(0.7rem, calc(16 / 14))
+    color: $black
+    z-index: 1
+
+    &::after 
+        @include align-top
+        left: -76%
+        width: 21px
+        height: 21px 
+        background-color: $white
+        border-radius: 50%
+        content: ""
+        z-index: -1
