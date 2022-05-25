@@ -19,11 +19,7 @@
     "gulp-terser": "^2.1.0",
     "postcss": "^8.3.11",
     "postcss-csso": "^6.0.0",
-    "postcss-sass": "^0.5.0",
-    "sass": "^1.52.1",
-    "stylelint": "^14.8.4",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-scss": "^4.2.0"
+    "sass": "^1.52.1"
   },
   "scripts": {
     "start": "gulp",
