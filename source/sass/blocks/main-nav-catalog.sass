@@ -15,7 +15,7 @@
     padding: 2px
     @include focus
 
-.main-nav-catalog__circle 
+.main-nav-catalog__toggle 
     position: relative
     display: inline-block
     width: 50px
@@ -34,13 +34,19 @@
         background-color: $black
         content: ""
 
-    &::before 
-        width: 2px
-        height: 16px
+    &--opened,
+    &--closed
+        &::before 
+            width: 2px
+            height: 16px
 
-    &::after 
-        width: 16px
-        height: 2px
+        &::after 
+            width: 16px
+            height: 2px
+
+    &--opened
+        &::before 
+            width: 0
 
     &:hover 
         opacity: 1

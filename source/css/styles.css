@@ -61,7 +61,7 @@ a {
 
 .main-header {
   margin-top: 40px;
-  padding: 0 60px;
+  padding: 0 60px 136px;
   background-color: #FFE17F;
 }
 
@@ -117,7 +117,7 @@ a {
   outline: 2px solid #AF4FFF;
 }
 
-.main-nav-catalog__circle {
+.main-nav-catalog__toggle {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -129,7 +129,7 @@ a {
   opacity: 0.3;
   cursor: pointer;
 }
-.main-nav-catalog__circle::before, .main-nav-catalog__circle::after {
+.main-nav-catalog__toggle::before, .main-nav-catalog__toggle::after {
   display: block;
   position: absolute;
   top: 50%;
@@ -138,15 +138,18 @@ a {
   background-color: #000000;
   content: "";
 }
-.main-nav-catalog__circle::before {
+.main-nav-catalog__toggle--opened::before, .main-nav-catalog__toggle--closed::before {
   width: 2px;
   height: 16px;
 }
-.main-nav-catalog__circle::after {
+.main-nav-catalog__toggle--opened::after, .main-nav-catalog__toggle--closed::after {
   width: 16px;
   height: 2px;
 }
-.main-nav-catalog__circle:hover {
+.main-nav-catalog__toggle--opened::before {
+  width: 0;
+}
+.main-nav-catalog__toggle:hover {
   opacity: 1;
 }
 
@@ -229,7 +232,6 @@ a {
 .main-nav-submenu--opened {
   display: flex;
   padding-top: 14px;
-  padding-bottom: 55px;
 }
 
 .main-nav-submenu__list {
