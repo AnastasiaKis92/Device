@@ -29,14 +29,57 @@
           <li class="main-nav__item main-nav-user main-nav-user--login">
             <a class="main-nav-user__link main-nav-user__link--login" href="#">Войти</a>
           </li>
+
+          <li class="main-nav__item main-nav-user main-nav-user--name">
+            <a class="main-nav-user__link main-nav-user__link--name" href="#">Коля Петухов</a>
+          </li>
+
+          <li class="main-nav__item main-nav-user main-nav-user--logout">
+            <a class="main-nav-user__link main-nav-user__link--logout" href="#">Выйти</a>
+          </li>
       
           <li class="main-nav__item main-nav-user">
             <a class="main-nav-user__link main-nav-user__link--compare" href="#">Сравнить</a>
           </li>
 
           <li class="main-nav__item main-nav-user">
-            <span class="main-nav-user__counter">2</span>
-            <a class="main-nav-user__link main-nav-user__link--cart" href="#">Корзина</a>
+            <a class="main-nav-user__link main-nav-user__link--cart" href="#">Корзина
+              <span class="main-nav-user__counter">2</span>
+            </a>
+
+            <!-- Поповер -->
+            <div class="main-nav-user__popover popover popover--closed">
+              <ul class="popover__list">
+                <li class="popover__item">                  
+                  <a class="popover__link" href="#">
+                    <span class="popover__text">Любительская селфи-палка</span>
+                    <img class="popover__img" src="img/popover/product-1.png" width="39" height="43" alt="Любительская селфи-палка.">
+                  </a>
+                  <button class="popover__item-btn" type="button">
+                    <svg class="popover__item-btn-img" aria-label="Удалить из корзины." focusable="false" width="10" height="11">
+                      <use href="img/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                </li>
+
+                <li class="popover__item">
+                  <a class="popover__link" href="#">
+                    <span class="popover__text">Профессиональная cелфи-палка</span>
+                    <img class="popover__img" src="img/popover/product-2.png" width="39" height="43" alt="Профессиональная cелфи-палка.">
+                  </a>
+                  <button class="popover__item-btn" type="button">
+                    <svg class="popover__item-btn-img" aria-label="Удалить из корзины." focusable="false" width="10" height="11">
+                      <use href="img/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="popover__total">
+                <p class="popover__total-goods">Товаров: 2</p>
+                <p class="popover__total-sum">Сумма: 2000 ₽</p>
+              </div>
+              <button class="btn popover__btn" type="button">Открыть корзину</button>
+            </div>
           </li>
         </ul>
         
@@ -94,7 +137,7 @@
     <!-- Главная страница -->
     <main class="main-index">
       <section class="gallery">
-        <img class="gallery__img" src="" width="560" height="560" alt="Квадрокоптер.">
+        <img class="gallery__img" src="#" width="560" height="560" alt="Квадрокоптер.">
         <button class="gallery__btn gallery__btn--prev" type="button">
           <span class="visually-hidden">Предыдущее фото.</span>
         </button>

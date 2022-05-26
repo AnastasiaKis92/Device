@@ -1,0 +1,91 @@
+.popover 
+    position: absolute
+    top: 36px
+    right: -60px
+    z-index: 1
+    width: 320px
+    min-height: 230px
+    @include font(0.8rem, calc(20 / 16))
+    color: $white
+    background-color: $black
+
+    &::before
+        @include align-left-center
+        top: -6px
+        width: 0
+        height: 0
+        border-left: 9px solid transparent
+        border-right: 9px solid transparent
+        border-bottom: 9px solid $black
+        content: ""
+    
+    &--opened
+        display: block
+    
+    &--closed
+        display: none
+
+.popover__content
+    height: 100%
+
+.popover__list
+    @include reset-list
+
+.popover__item
+    display: flex
+    padding: 20px
+
+    & + &
+        border-top: 1px solid fade-out($white, 0.8)
+
+.popover__link 
+    display: flex
+    flex-direction: row-reverse
+    margin-right: 35px
+    padding: 2px
+    @include link
+    @include focus
+
+.popover__text 
+    padding-left: 23px
+    color: $white
+
+.popover__img
+    display: block
+    order: 0
+
+.popover__item-btn
+    align-self: flex-start
+    padding: 2px
+    background-color: transparent
+    border: none
+    cursor: pointer
+    @include link
+    @include focus
+
+.popover__total
+    display: flex
+    justify-content: space-between
+    padding: 12px 20px
+    background-color: $black-1
+
+.popover__total-goods,
+.popover__total-sum
+    margin: 0
+
+.popover__btn
+    margin: 20px
+    padding: 14px 23px
+    background-color: $white
+    @include focus
+    
+    &:hover,
+    &:active
+        background-color: $yellow
+    
+    &:active,
+    &:disabled
+        color: fade-out($black, 0.7)
+
+    &:disabled
+        background-color: $white

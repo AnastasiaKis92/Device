@@ -1,9 +1,9 @@
 // Меню пользователя - "Найти, сравнить, корзина"
 .main-nav-user
     position: relative
-    @include link
-
-    &--login
+    
+    &--login,
+    &--logout
         margin-right: auto
 
 .main-nav-user__link
@@ -11,25 +11,35 @@
     margin-right: 18px
     text-align: right
     color: $black
+    @include link
     @include focus
 
-    &--login 
-        width: 79px
-        background: url("../img/header/auth.svg") no-repeat left 2px center
+    &--login,
+    &--name
+        padding-left: 27px
+        background: url("../img/header/auth.svg") no-repeat left center
+    
+    &--login
+        display: none
+    
+    &--name
+        margin-right: 28px
 
+    &--logout
+        color: fade-out($black, 0.7)
+        
     &--compare 
-        width: 105px
-        background: url("../img/header/compare.svg") no-repeat left 2px center
+        padding-left: 22px
+        background: url("../img/header/compare.svg") no-repeat left center
 
     &--cart 
-        width: 117px
+        padding-left: 40px
         margin-right: 0
         background: url("../img/header/cart.svg") no-repeat left 15px center
 
-
 .main-nav-user__counter
     @include align-top
-    left: 5px
+    left: 7px
     @include font(0.7rem, calc(16 / 14))
     color: $black
     z-index: 1
