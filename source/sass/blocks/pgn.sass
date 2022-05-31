@@ -1,0 +1,53 @@
+.pgn
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.pgn-btn-more
+    width: 40%
+    padding: 10px
+    @include focus
+    @include disabled
+
+    &:hover
+        &::before
+            height: 100%
+            transition: height 0.3s ease
+    
+    &:active
+        background-color: $yellow-active
+
+    &:disabled
+        &::before
+            height: 8px
+
+.pgn__list
+    display: flex
+    flex-wrap: wrap
+    @include reset-list
+
+.pgn__item
+    display: flex
+    padding: 2px
+
+    & + &
+        margin-left: 19px
+
+    &:focus-within
+        outline: 2px solid $focus-color
+
+.pgn__btn 
+    @include reset-btn
+    width: 12px
+    height: 12px
+    padding: 2px
+    border-radius: 50%
+    border: 2px solid $black
+    @include link
+    @include disabled
+
+    &:focus
+        outline: none
+
+    &--active
+        background-color: $black

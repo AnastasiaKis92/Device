@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Device</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/Rubikregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Rubikbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Ralewayextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   
@@ -86,7 +87,7 @@
         <!-- Каталог в шапке -->
         <div class="main-nav-catalog">
           <button class="btn main-nav-catalog__btn" type="button">Каталог товаров
-            <span class="main-nav-catalog__toggle main-nav-catalog__toggle--closed"></span>
+            <span class="main-nav-catalog__toggle"></span>
           </button>
           
           <ul class="main-nav-catalog__list">
@@ -136,51 +137,170 @@
 
     <!-- Главная страница -->
     <main class="main-index">
-      <section class="gallery">
-        <img class="gallery__img" src="#" width="560" height="560" alt="Квадрокоптер.">
-        <button class="gallery__btn gallery__btn--prev" type="button">
-          <span class="visually-hidden">Предыдущее фото.</span>
-        </button>
-        <button class="gallery__btn gallery__btn--next" type="button">
-          <span class="visually-hidden">Следующее фото.</span>
-        </button>
-        <h1 class="gallery__title">Порхает как бабочка, жалит как пчела!</h1>
-        <span class="gallery__number">01</span>
-        <p class="gallery__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        
-        <button class="btn gallery__btn" type="button">Подробнее</button>
+      <section class="slider">
+        <h1 class="visually-hidden">Галерея товаров</h1>
 
-        <!-- Пагинация -->
-        <ol class="gallery__pgn pgn-gallery">
-          <li class="pgn-gallery__list">
-            <button class="pgn-gallery__btn pgn-gallery__btn--active" type="button">
-              <span class="visually-hidden">1 фото.</span>
-            </button>
-          </li>
-          <li class="pgn-gallery__list">
-            <button class="pgn-gallery__btn" type="button">
-              <span class="visually-hidden">2 фото.</span>
-            </button>
-          </li>
-          <li class="pgn-gallery__list">
-            <button class="pgn-gallery__btn" type="button">
-              <span class="visually-hidden">3 фото.</span>
-            </button>
-          </li>
-        </ol>
+        <ul class="slider__list">
+          <li class="slider__item slider__item--current">
+            <div class="slider__item-col1">
+              <div class="slider-container">
+                <button class="slider__btn slider__btn--prev" type="button">
+                  <span class="visually-hidden">Предыдущее фото.</span>
+                </button>
+                <button class="slider__btn slider__btn--next" type="button">
+                  <span class="visually-hidden">Следующее фото.</span>
+                </button>
+                  <img class="slider__img" src="img/main-index/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
+              </div>
+            </div>
+            
+            <div class="slider__item-col2">
+              <h2 class="slider__title">Порхает как бабочка, жалит как пчела!</h2>
+              <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              
+              <div class="slider__pgn pgn">
+                <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
 
-        <!-- Характеристики товара-->
-        <table class="gallery__table table-gallery">
-          <caption class="visually-hidden">Характеристика товара.</caption>
-          <tr class="table-gallery__row">
-            <th class="table-gallery__value">800 м</th>
-            <th class="table-gallery__value">50 м</th>
-          </tr>
-          <tr class="table-gallery__row">
-            <td class="table-gallery__cell">Дальность полета</td>
-            <td class="table-gallery__cell">Радиус поражения</td>
-          </tr>
-        </table>
+                <ol class="pgn__list">
+                  <li class="pgn__item">
+                    <button class="pgn__btn pgn__btn--active" type="button">
+                      <span class="visually-hidden">1 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">2 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">3 фото.</span>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+
+              <dl class="slider__features features">
+                <h2 class="visually-hidden">Характеристика товара</h2>
+                <div class="features__item">
+                  <dt class="features__term">800 м</dt>
+                  <dd class="features__description">Дальность полета</dd>
+                </div>
+                <div class="features__item">
+                  <dt class="features__term">50 м</dt>
+                  <dd class="features__description">Радиус поражения</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+
+          <li class="slider__item">
+            <div class="slider__item-col1">
+              <div class="slider-container">
+                <button class="slider__btn slider__btn--prev" type="button">
+                  <span class="visually-hidden">Предыдущее фото.</span>
+                </button>
+                <button class="slider__btn slider__btn--next" type="button">
+                  <span class="visually-hidden">Следующее фото.</span>
+                </button>
+                  <img class="slider__img" src="img/main-index/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
+              </div>
+            </div>
+            
+            <div class="slider__item-col2">
+              <h2 class="slider__title">Худеем<br>правильно!</h2>
+              <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              
+              <div class="slider__pgn pgn">
+                <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
+
+                <ol class="pgn__list">
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">1 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn pgn__btn--active" type="button">
+                      <span class="visually-hidden">2 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">3 фото.</span>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+
+              <dl class="slider__features features">
+                <h2 class="visually-hidden">Характеристика товара</h2>
+                <div class="features__item">
+                  <dt class="features__term">48 часов</dt>
+                  <dd class="features__description">Без подзарядки</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+
+          <li class="slider__item">
+            <div class="slider__item-col1">
+              <div class="slider-container">
+                <button class="slider__btn slider__btn--prev" type="button">
+                  <span class="visually-hidden">Предыдущее фото.</span>
+                </button>
+                <button class="slider__btn slider__btn--next" type="button">
+                  <span class="visually-hidden">Следующее фото.</span>
+                </button>
+                  <img class="slider__img" src="img/main-index/slider-3.png" width="560" height="560" alt="Фитнес-браслет.">
+              </div>
+            </div>
+            
+            <div class="slider__item-col2">
+              <h2 class="slider__title">Делай селфи,как Бен Стиллер!</h2>
+              <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+              
+              <div class="slider__pgn pgn">
+                <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
+                
+                <ol class="pgn__list">
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">1 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn" type="button">
+                      <span class="visually-hidden">2 фото.</span>
+                    </button>
+                  </li>
+                  <li class="pgn__item">
+                    <button class="pgn__btn pgn__btn--active" type="button">
+                      <span class="visually-hidden">3 фото.</span>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+
+              <dl class="slider__features features">
+                <h2 class="visually-hidden">Характеристика товара</h2>
+                <div class="features__item">
+                  <dt class="features__term">8,5 м</dt>
+                  <dd class="features__description">Длина палки</dd>
+                </div>
+                <div class="features__item">
+                  <dt class="features__term">5 кг</dt>
+                  <dd class="features__description">Вес палки</dd>
+                </div>
+                <div class="features__item">
+                  <dt class="features__term">Карбон</dt>
+                  <dd class="features__description">Материал</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+
+        </ul>
       </section>
 
       <!-- Список категорий -->
@@ -302,7 +422,7 @@
       </section>
 
       <section class="footer-user">
-        <h2 class="visually-hidden">Пользовательское меню и соцсети.</h2>
+        <h2 class="visually-hidden">Пользовательское меню и соцсети</h2>
         <ul class="footer-user__list">
           <li class="footer-user__item">
             <a class="footer-user__link" href="#">Доставка</a>

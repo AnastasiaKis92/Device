@@ -33,16 +33,14 @@
         @include align-center
         background-color: $black
         content: ""
+        
+    &::before 
+        width: 2px
+        height: 16px
 
-    &--opened,
-    &--closed
-        &::before 
-            width: 2px
-            height: 16px
-
-        &::after 
-            width: 16px
-            height: 2px
+    &::after 
+        width: 16px
+        height: 2px
 
     &--opened
         &::before 
