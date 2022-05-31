@@ -1,3 +1,5 @@
+source/css/*.css
+source/css/*.map
 .vscode/settings.json
 source/css/*.map
 node_modules
