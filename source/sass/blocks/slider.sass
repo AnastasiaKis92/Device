@@ -1,0 +1,72 @@
+.slider__list
+    @include reset-list
+    counter-reset: slider-item
+    
+.slider__item
+    display: none
+
+    &--current
+        display: flex
+        margin-top: -13%
+
+.slider__item-col1,
+.slider__item-col2
+    width: 50%
+
+.slider__item-col1 + .slider__item-col2
+    margin-left: 40px
+
+.slider-container
+    position: relative
+    grid-column: 1 / 2
+    grid-row: 1 / 5 
+
+.slider__btn
+    @include reset-btn
+    position: absolute
+    top: 37%
+    width: 20px
+    height: 60px
+    padding: 2px
+    background-image: url("../img/main-index/icon-arrow.svg")
+    z-index: 1
+    @include link
+    @include focus
+    @include disabled
+
+    &--prev
+        left: 30px
+
+    &--next
+        right: 0
+        transform: rotate(180deg)
+
+.slider__title
+    position: relative
+    grid-column: 2 / 3
+    grid-row: 1 / 2
+    margin-top: 120px
+    margin-bottom: 29px
+    font-family: "Raleway", "Arial", sans-serif
+    @include font(2.5rem, 1)
+    color: $black
+    z-index: 1
+
+    &::before
+        position: absolute
+        top: -35%
+        right: 9%
+        font-family: "Rubikbold", "Arial", sans-serif
+        @include font(9rem, calc(30 / 180))
+        color: $white
+        counter-increment: slider-item
+        content: '0' counter(slider-item)
+        z-index: -1
+
+.slider__text
+    margin: 0
+    margin-bottom: 51px
+
+.slider__features
+    margin: 0
+    margin-top: 49px

@@ -1,8 +1,9 @@
 .popover 
+    display: block
     position: absolute
     top: 36px
     right: -60px
-    z-index: 1
+    z-index: 3
     width: 320px
     min-height: 230px
     @include font(0.8rem, calc(20 / 16))
@@ -18,9 +19,6 @@
         border-right: 9px solid transparent
         border-bottom: 9px solid $black
         content: ""
-    
-    &--opened
-        display: block
     
     &--closed
         display: none
