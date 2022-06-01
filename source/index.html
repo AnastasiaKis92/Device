@@ -8,7 +8,7 @@
     <link rel="preload" href="fonts/Ralewayextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  
+
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo" href="/">
@@ -16,7 +16,7 @@
           <use href="img/sprite.svg#logo"></use>
         </svg>
       </a>
-        
+
       <!-- Форма + Войти -->
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -38,7 +38,7 @@
           <li class="main-nav__item main-nav-user main-nav-user--logout">
             <a class="main-nav-user__link main-nav-user__link--logout" href="#">Выйти</a>
           </li>
-      
+
           <li class="main-nav__item main-nav-user">
             <a class="main-nav-user__link main-nav-user__link--compare" href="#">Сравнить</a>
           </li>
@@ -51,7 +51,7 @@
             <!-- Поповер -->
             <div class="main-nav-user__popover popover popover--closed">
               <ul class="popover__list">
-                <li class="popover__item">                  
+                <li class="popover__item">
                   <a class="popover__link" href="#">
                     <span class="popover__text">Любительская селфи-палка</span>
                     <img class="popover__img" src="img/popover/product-1.png" width="39" height="43" alt="Любительская селфи-палка.">
@@ -83,13 +83,13 @@
             </div>
           </li>
         </ul>
-        
+
         <!-- Каталог в шапке -->
         <div class="main-nav-catalog">
           <button class="btn main-nav-catalog__btn" type="button">Каталог товаров
             <span class="main-nav-catalog__toggle"></span>
           </button>
-          
+
           <ul class="main-nav-catalog__list">
             <li class="main-nav-catalog__item">
               <a class="btn main-nav-catalog__link main-nav-catalog__link--current" href="#">Доставка</a>
@@ -101,7 +101,7 @@
               <a class="btn main-nav-catalog__link" href="#">Контакты</a>
             </li>
           </ul>
-        </div>  
+        </div>
 
         <!-- Выпадающее меню -->
         <div class="main-nav-submenu main-nav-submenu--closed">
@@ -153,11 +153,11 @@
                   <img class="slider__img" src="img/main-index/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
               </div>
             </div>
-            
+
             <div class="slider__item-col2">
               <h2 class="slider__title">Порхает как бабочка, жалит как пчела!</h2>
               <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              
+
               <div class="slider__pgn pgn">
                 <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
 
@@ -206,11 +206,11 @@
                   <img class="slider__img" src="img/main-index/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
               </div>
             </div>
-            
+
             <div class="slider__item-col2">
               <h2 class="slider__title">Худеем<br>правильно!</h2>
               <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              
+
               <div class="slider__pgn pgn">
                 <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
 
@@ -255,14 +255,14 @@
                   <img class="slider__img" src="img/main-index/slider-3.png" width="560" height="560" alt="Фитнес-браслет.">
               </div>
             </div>
-            
+
             <div class="slider__item-col2">
               <h2 class="slider__title">Делай селфи,как Бен Стиллер!</h2>
               <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-              
+
               <div class="slider__pgn pgn">
                 <button class="btn btn--primary pgn-btn-more" type="button">Подробнее</button>
-                
+
                 <ol class="pgn__list">
                   <li class="pgn__item">
                     <button class="pgn__btn" type="button">
@@ -299,7 +299,6 @@
               </dl>
             </div>
           </li>
-
         </ul>
       </section>
 
@@ -309,27 +308,69 @@
         <ul class="category__list">
 
           <li class="category__item">
-            <p class="category__text">Виртуальная реальность</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container">
+                <svg class="category__img" aria-label="Очки виртуальной реальности." focusable="false" width="97" height="55">
+                  <use href="img/sprite.svg#category-1"></use>
+                </svg>
+              </div>
+              <span class="category__text">Виртуальная реальность</span>
+            </a>
           </li>
 
           <li class="category__item">
-            <p class="category__text">Моноподы для селфи</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container category__img-container--secondary">
+                <svg class="category__img" aria-label="Моноподы для селфи." focusable="false" width="87" height="117">
+                  <use href="img/sprite.svg#category-2"></use>
+                </svg>
+              </div>
+              <span class="category__text">Моноподы для&nbsp;селфи</span>
+            </a>
           </li>
 
           <li class="category__item">
-            <p class="category__text">Экшн-камеры</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container">
+                <svg class="category__img" aria-label="Экшн-камеры." focusable="false" width="72" height="87">
+                  <use href="img/sprite.svg#category-3"></use>
+                </svg>
+              </div>
+              <span class="category__text">Экшн-камеры</span>
+            </a>
           </li>
 
           <li class="category__item">
-            <p class="category__text">Фитнес-браслеты</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container">
+                <svg class="category__img" aria-label="Фитнес-браслеты." focusable="false" width="108" height="66">
+                  <use href="img/sprite.svg#category-4"></use>
+                </svg>
+              </div>
+              <span class="category__text">Фитнес-браслеты</span>
+            </a>
           </li>
 
           <li class="category__item">
-            <p class="category__text">Умные часы</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container">
+                <svg class="category__img" aria-label="Умные часы." focusable="false" width="57" height="98">
+                  <use href="img/sprite.svg#category-5"></use>
+                </svg>
+              </div>
+              <span class="category__text">Умные часы</span>
+            </a>
           </li>
 
           <li class="category__item">
-            <p class="category__text">Квадрокоптеры</p>
+            <a class="category__link" href="#">
+              <div class="category__img-container">
+                <svg class="category__img" aria-label="Квадрокоптеры." focusable="false" width="133" height="70">
+                  <use href="img/sprite.svg#category-6"></use>
+                </svg>
+              </div>
+              <span class="category__text">Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -380,13 +421,13 @@
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. </p>
-        
+
         <h3 class="contacts__subtitle">Интернет-магазин «Девайс»</h3>
         <address class="contacts__adr adr-contacts">
           <p class="adr-contacts__text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="adr-contacts__phone" href="tel:+78128121212">+7(812)812-12-12</a>
         </address>
-    
+
         <h3 class="contacts__subtitle">Время работы</h3>
         <ul class="contacts__schedule schedule-contacts">
           <li class="schedule-contacts__item">пн—пт: с 10:00 до 22:00</li>
@@ -395,7 +436,7 @@
 
         <button class="btn contacts__btn" type="submit">Напишите нам</button>
       </section>
-      
+
       <!-- Подписаться -->
       <section class="subscribe">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
@@ -406,7 +447,7 @@
         </form>
         <span class="subscribe__notice">Это бесплатно</span>
       </section>
-    </main> 
+    </main>
 
     <!-- Футер -->
     <footer class="page-footer">
