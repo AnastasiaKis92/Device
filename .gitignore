@@ -1,6 +1,6 @@
 source/css/*.css
 source/css/*.map
-.vscode/settings.json
+.vscode/
 source/css/*.map
 node_modules
 package-lock.json
