@@ -1,0 +1,54 @@
+.about__container
+    display: flex
+    padding-bottom: 70px
+
+.about
+    position: relative
+    margin-right: 10%
+
+    &::before
+        position: absolute
+        top: 0
+        width: 84px
+        height: 7px
+        background-color: $black
+        content: ""
+
+.about__title
+    margin: 0
+    padding: 40px 0 48px
+    @include Raleway
+    @include font(2.5rem, 1)
+    color: $black
+
+.about__text
+    margin: 0
+    margin-bottom: 30px
+
+.about__list
+    @include reset-list
+    margin-bottom: 30px
+
+.about__item
+    position: relative
+    padding-left: 34px
+
+    & + &:active
+        margin-top: 19px
+
+    &::before
+        @include align-top
+        left: 0
+        width: 8px
+        height: 8px
+        background-color: $yellow-dark
+        border-radius: 50%
+        content: ""
+
+.about__link
+    font-weight: 700
+    color: $black
+
+.about__btn
+    width: 50%
+    padding: 10px
