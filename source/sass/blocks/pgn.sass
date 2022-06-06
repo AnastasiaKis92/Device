@@ -6,20 +6,6 @@
 .pgn-btn-more
     width: 40%
     padding: 10px
-    @include focus
-    @include disabled
-
-    &:hover
-        &::before
-            height: 100%
-            transition: height 0.3s ease
-
-    &:active
-        background-color: $yellow-active
-
-    &:disabled
-        &::before
-            height: 8px
 
 .pgn__list
     display: flex

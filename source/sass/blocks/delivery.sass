@@ -1,0 +1,65 @@
+.delivery
+    padding: 68px 0
+
+.delivery__container
+    display: flex
+    align-items: stretch
+    padding: 2px
+    text-align: center
+
+    &:focus-within
+        outline: 2px solid $focus-color
+
+.delivery__link
+    flex-grow: 1
+    order: 2
+    margin: 0
+    padding: 40px 125px
+    @include Raleway
+    @include font(1rem, 1.15)
+    color: $black
+    letter-spacing: 0.2em
+    text-align: center
+    text-transform: uppercase
+    background-color: $gray-bg
+
+    &:hover ~ .delivery__img-container
+        background-color: $yellow-dark
+
+    &:hover ~ .delivery__info-container svg
+        opacity: 1
+
+    &:active,
+    &:active ~ .delivery__img-container,
+    &:active ~ .delivery__info-container
+        opacity: 0.3
+
+    &:focus
+        outline: none
+
+.delivery__info-img
+    opacity: 0.3
+
+.delivery__img-container
+    order: 1
+    width: 11%
+    padding: 30px 0
+    background-color: $yellow
+
+.delivery__info-container
+    position: relative
+    order: 3
+    padding: 44px 0
+    width: 11%
+    @include font(0.6rem, 1)
+    background-color: $gray-bg
+    z-index: 1
+
+    &::before
+        @include align-center
+        width: 40px
+        height: 40px
+        background-color: $gray-bg-1
+        border-radius: 50%
+        content: ""
+        z-index: -1

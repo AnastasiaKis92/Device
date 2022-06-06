@@ -1,21 +1,21 @@
 // Каталог товаров, доставка, гарантия, контакты
 .main-nav-catalog
     display: flex
-    
-.main-nav-catalog__list 
+
+.main-nav-catalog__list
     @include reset-list
     display: flex
     flex-wrap: wrap
     align-items: center
     margin-left: auto
 
-.main-nav-catalog__btn 
+.main-nav-catalog__btn
     display: flex
     align-items: center
     padding: 2px
     @include focus
 
-.main-nav-catalog__toggle 
+.main-nav-catalog__toggle
     position: relative
     display: inline-block
     width: 50px
@@ -33,28 +33,28 @@
         @include align-center
         background-color: $black
         content: ""
-        
-    &::before 
+
+    &::before
         width: 2px
         height: 16px
 
-    &::after 
+    &::after
         width: 16px
         height: 2px
 
     &--opened
-        &::before 
+        &::before
             width: 0
 
-    &:hover 
+    &:hover
         opacity: 1
 
-.main-nav-catalog__link 
+.main-nav-catalog__link
     margin-left: 45px
     color: $black
     @include link
     @include focus
-        
+
     &--current::after
         display: block
         width: 100%

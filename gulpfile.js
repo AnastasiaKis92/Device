@@ -6,6 +6,8 @@ import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import rename from 'gulp-rename';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -18,6 +20,16 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+// SVG Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons-sprite/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('source/img'));
 }
 
 // Server
@@ -41,7 +53,6 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
 export default gulp.series(
-  styles, server, watcher
+  styles, sprite, server, watcher
 );

@@ -1,4 +1,4 @@
-.popover 
+.popover
     display: block
     position: absolute
     top: 36px
@@ -19,7 +19,7 @@
         border-right: 9px solid transparent
         border-bottom: 9px solid $black
         content: ""
-    
+
     &--closed
         display: none
 
@@ -36,7 +36,7 @@
     & + &
         border-top: 1px solid fade-out($white, 0.8)
 
-.popover__link 
+.popover__link
     display: flex
     flex-direction: row-reverse
     margin-right: 35px
@@ -44,7 +44,7 @@
     @include link
     @include focus
 
-.popover__text 
+.popover__text
     padding-left: 23px
     color: $white
 
@@ -76,11 +76,11 @@
     padding: 14px 23px
     background-color: $white
     @include focus
-    
+
     &:hover,
     &:active
         background-color: $yellow
-    
+
     &:active,
     &:disabled
         color: fade-out($black, 0.7)

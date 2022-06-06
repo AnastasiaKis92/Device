@@ -11,9 +11,11 @@
     background-color: transparent
     border: none
     cursor: pointer
-        
+
     &--primary
         position: relative
+        @include focus
+        @include disabled
 
         &::before
             @include align-top
@@ -23,3 +25,12 @@
             background-color: $yellow
             content: ""
             z-index: -1
+
+        &:enabled:hover,
+        &:enabled:focus
+            &::before
+                height: 100%
+                transition: height 0.3s ease
+
+        &:enabled:active
+            background-color: $yellow-active

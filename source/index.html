@@ -13,7 +13,7 @@
     <header class="main-header">
       <a class="main-header__logo" href="/">
         <svg class="main-header__logo-icon" aria-label="Логотип Device." focusable="false" width="145" height="36">
-          <use href="img/sprite.svg#logo"></use>
+          <use href="img/sprite.svg#icon-logo"></use>
         </svg>
       </a>
 
@@ -58,7 +58,7 @@
                   </a>
                   <button class="popover__item-btn" type="button">
                     <svg class="popover__item-btn-img" aria-label="Удалить из корзины." focusable="false" width="10" height="11">
-                      <use href="img/sprite.svg#cross"></use>
+                      <use href="img/sprite.svg#icon-cross"></use>
                     </svg>
                   </button>
                 </li>
@@ -143,7 +143,7 @@
         <ul class="slider__list">
           <li class="slider__item slider__item--current">
             <div class="slider__item-col1">
-              <div class="slider-container">
+              <div class="slider__container">
                 <button class="slider__btn slider__btn--prev" type="button">
                   <span class="visually-hidden">Предыдущее фото.</span>
                 </button>
@@ -196,7 +196,7 @@
 
           <li class="slider__item">
             <div class="slider__item-col1">
-              <div class="slider-container">
+              <div class="slider__container">
                 <button class="slider__btn slider__btn--prev" type="button">
                   <span class="visually-hidden">Предыдущее фото.</span>
                 </button>
@@ -245,7 +245,7 @@
 
           <li class="slider__item">
             <div class="slider__item-col1">
-              <div class="slider-container">
+              <div class="slider__container">
                 <button class="slider__btn slider__btn--prev" type="button">
                   <span class="visually-hidden">Предыдущее фото.</span>
                 </button>
@@ -311,7 +311,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container">
                 <svg class="category__img" aria-label="Очки виртуальной реальности." focusable="false" width="97" height="55">
-                  <use href="img/sprite.svg#category-1"></use>
+                  <use href="img/sprite.svg#icon-category-1"></use>
                 </svg>
               </div>
               <span class="category__text">Виртуальная реальность</span>
@@ -322,7 +322,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container category__img-container--secondary">
                 <svg class="category__img" aria-label="Моноподы для селфи." focusable="false" width="87" height="117">
-                  <use href="img/sprite.svg#category-2"></use>
+                  <use href="img/sprite.svg#icon-category-2"></use>
                 </svg>
               </div>
               <span class="category__text">Моноподы для&nbsp;селфи</span>
@@ -333,7 +333,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container">
                 <svg class="category__img" aria-label="Экшн-камеры." focusable="false" width="72" height="87">
-                  <use href="img/sprite.svg#category-3"></use>
+                  <use href="img/sprite.svg#icon-category-3"></use>
                 </svg>
               </div>
               <span class="category__text">Экшн-камеры</span>
@@ -344,7 +344,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container">
                 <svg class="category__img" aria-label="Фитнес-браслеты." focusable="false" width="108" height="66">
-                  <use href="img/sprite.svg#category-4"></use>
+                  <use href="img/sprite.svg#icon-category-4"></use>
                 </svg>
               </div>
               <span class="category__text">Фитнес-браслеты</span>
@@ -355,7 +355,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container">
                 <svg class="category__img" aria-label="Умные часы." focusable="false" width="57" height="98">
-                  <use href="img/sprite.svg#category-5"></use>
+                  <use href="img/sprite.svg#icon-category-5"></use>
                 </svg>
               </div>
               <span class="category__text">Умные часы</span>
@@ -366,7 +366,7 @@
             <a class="category__link" href="#">
               <div class="category__img-container">
                 <svg class="category__img" aria-label="Квадрокоптеры." focusable="false" width="133" height="70">
-                  <use href="img/sprite.svg#category-6"></use>
+                  <use href="img/sprite.svg#icon-category-6"></use>
                 </svg>
               </div>
               <span class="category__text">Квадрокоптеры</span>
@@ -376,24 +376,53 @@
       </section>
 
       <!-- Доставка -->
-      <section class="delivery">
-        <h2 class="delivery__title">Доставка</h2>
-        <p class="delivery__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        <ul class="delivery__list">
+      <section class="services">
+        <h2 class="visually-hidden">Услуги компании</h2>
+        <div class="services__container services__container--delivery services__container--current">
+          <p class="services__title">Доставка</p>
+          <p class="services__text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
 
-          <li class="delivery__item">
-            <button class="btn delivery__btn delivery__btn--active" type="button">Доставка</button>
+        <div class="services__container services__container--warranty">
+          <p class="services__title">Гарантия</p>
+          <p class="services__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        </div>
+
+        <div class="services__container services__container--credit">
+          <p class="services__title">Кредит</p>
+          <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+        </div>
+
+        <ul class="services__list">
+          <li class="services__item">
+            <button class="btn btn--primary services__btn services__btn--current" type="button">Доставка</button>
           </li>
 
-          <li class="delivery__item">
-            <button class="btn delivery__btn" type="button">Гарантия</button>
+          <li class="services__item">
+            <button class="btn btn--primary services__btn" type="button">Гарантия</button>
           </li>
 
-          <li class="delivery__item">
-            <button class="btn delivery__btn" type="button">Кредит</button>
+          <li class="services__item">
+            <button class="btn btn--primary services__btn" type="button">Кредит</button>
           </li>
         </ul>
-        <span class="delivery__order">Доставим редкий товар под заказ</span>
+      </section>
+
+      <section class="delivery">
+        <div class="delivery__container">
+          <h2 class="visually-hidden">Доставка редкого товара</h2>
+          <a class="delivery__link" href="#">Доставим редкий товар под заказ</a>
+          <div class="delivery__img-container">
+            <svg class="delivery__img" aria-hidden="true" focusable="false" width="47" height="31">
+              <use href="img/sprite.svg#icon-delivery"></use>
+            </svg>
+          </div>
+          <div class="delivery__info-container">
+            <svg class="delivery__info-img" aria-hidden="true" focusable="false" width="2" height="12">
+              <use href="img/sprite.svg#icon-info"></use>
+            </svg>
+          </div>
+        </div>
       </section>
 
       <!-- О нас -->

@@ -1,0 +1,91 @@
+.services
+    position: relative
+    display: flex
+    padding-bottom: 72px
+    background-color: $gray-bg
+
+    &::after
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        height: 25%
+        background-color: $white
+        content: ""
+        z-index: 0
+
+.services__container
+    display: none
+    position: relative
+    padding: 72px 106px 72px 116px
+    z-index: 1
+
+    &--current
+        display: block
+
+    &::after
+        @include align-top
+        right: 4%
+        background-repeat: no-repeat
+        content: ""
+
+    &--delivery
+        &::after
+            width: 136px
+            height: 164px
+            background-image: url("../img/main-index/icon-services-1.svg")
+
+    &--warranty
+        &::after
+            width: 171px
+            height: 195px
+            background-image: url("../img/main-index/icon-services-2.svg")
+
+    &--credit
+        &::after
+            width: 156px
+            height: 188px
+            background-image: url("../img/main-index/icon-services-3.svg")
+
+.services__title
+    margin: 0
+    margin-bottom: 34px
+    @include Raleway
+    @include font(2.5rem, 1)
+    color: $black
+    order: 1
+
+.services__text
+    width: 65%
+
+.services__list
+    @include reset-list
+    padding: 64px 0
+    width: 37%
+    order: -1
+    box-shadow: 7px 0px 0px $black
+    z-index: 1
+
+.services__item
+    & + &
+        margin-top: 35px
+
+.services__btn
+    width: 66%
+    padding: 10px
+
+    &--current
+        text-align: left
+        width: 100%
+        color: $yellow
+        background-color: $black
+
+        &:enabled:hover
+            color: fade-out($yellow, 0.5)
+
+        &:enabled:active
+            color: fade-out($yellow, 0.7)
+            background-color: $black
+
+.services__img
+    align-self: center
