@@ -469,13 +469,22 @@
 
       <!-- Подписаться -->
       <section class="subscribe">
-        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-        <p class="subscribe__text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe__field" type="email" name="email" placeholder="Ваш e-mail">
-          <button class="btn subscribe__btn" type="submit">Подписаться</button>
-        </form>
-        <span class="subscribe__notice">Это бесплатно</span>
+        <div class="subscribe__title-container">
+          <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+          <p class="subscribe__text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+        </div>
+        <div class="subscribe__form-container">
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="subscribe__field" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="btn subscribe__btn" type="submit">Подписаться</button>
+          </form>
+          <span class="subscribe__notice">
+            <svg class="subscribe__icon" aria-hidden="true" focusable="false" width="15" height="14">
+              <use href="img/sprite.svg#icon-tick"></use>
+            </svg>
+            Это бесплатно
+          </span>
+        </div>
       </section>
     </main>
 

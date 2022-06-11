@@ -1,0 +1,71 @@
+.subscribe
+    background-color: $gray-bg
+
+.subscribe__title-container
+    display: flex
+    justify-content: space-between
+    padding: 64px 0 144px
+
+.subscribe__title
+    width: 30%
+    margin: 0
+    @include Raleway
+    @include font(2.5rem, 1)
+    color: $black
+
+.subscribe__text
+    width: 48%
+    margin: 0
+    padding-right: 35px
+
+.subscribe__form-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 56px
+
+.subscribe__form
+    display: flex
+    width: 70%
+
+.subscribe__field
+    width: 62%
+    padding: 11px 11px 11px 16px
+    font-family: "Rubik", "Arial", sans-serif
+    @include font(0.9rem, calc(30 / 18))
+    background-color: transparent
+    border: none
+    border-bottom: 3px solid $gray-btn
+
+    &:hover
+        color: $gray
+
+    &:focus
+        background-color: $gray-bg-1
+        transition: 0.3s ease
+        outline: none
+
+    &:invalid
+        border-bottom: 3px solid $error
+
+    &:disabled
+        opacity: 0.5
+
+.subscribe__btn
+    padding: 15px 39px
+    border: 3px solid $gray-btn
+    @include focus
+    @include disabled
+
+    &:enabled:hover
+        color: $white
+        background-color: $black
+        border-color: $black
+        transition: 0.3s ease
+
+    &:enabled:active
+        color: fade-out($white, 0.7)
+        border-color: $black
+
+.subscribe__icon
+    margin-right: 16px
