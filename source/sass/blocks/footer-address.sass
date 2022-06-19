@@ -1,0 +1,25 @@
+.footer-address
+    width: 22%
+
+.footer-address__link
+    display: block
+    width: 149px
+    padding: 2px
+    @include link
+    @include focus
+
+.footer-address__icon
+    display: block
+
+.footer-address__text
+    padding-top: 35px
+    @include font(0.8rem, 1.25)
+    font-style: normal
+
+    &::after
+        display: block
+        margin-top: 64px
+        width: 33%
+        height: 7px
+        background-color: $yellow-dark-footer
+        content: ""

@@ -1,0 +1,25 @@
+.footer-social
+    @include reset-list
+    display: flex
+    justify-content: center
+
+.footer-social__item
+    & + &
+        margin-left: 15px
+
+.footer-social__link
+    display: block
+    padding: 2px
+    @include focus
+
+.footer-social__icon
+    display: block
+    color: $gray
+    fill: fade-out($white, 0.7)
+    transition: 0.3s ease
+
+    &:hover
+        fill: $yellow-dark
+
+    &:active
+        color: fade-out($gray, 0.7)

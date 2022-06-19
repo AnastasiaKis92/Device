@@ -1,0 +1,32 @@
+.footer-contacts
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    width: 14%
+
+.footer-contacts__tel
+    display: block
+    margin: 75px 0 62px
+    @include font(0.8rem, 1.25)
+    text-decoration: underline
+    @include focus
+
+    &:hover
+        color: $yellow-dark
+
+    &:active
+        opacity: 0.3
+
+.footer-contacts__link
+    padding: 1px
+    @include focus
+
+.footer-contacts__icon
+    display: block
+    color: $yellow-dark
+
+    &:hover
+        color: $white
+
+    &:active
+        opacity: 0.3
